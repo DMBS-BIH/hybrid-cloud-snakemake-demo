@@ -1,0 +1,10 @@
+.env
+.tes_instances
+.inputs
+.tmp
+.netrc
+results/
+.snakemake/
+.ipynb_checkpoints
+config.yaml
+demo
