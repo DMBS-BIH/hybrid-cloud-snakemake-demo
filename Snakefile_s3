@@ -8,6 +8,7 @@ S3 = S3RemoteProvider(access_key_id="XXX", secret_access_key="XXX", endpoint_url
 outfile_s3 = "bucket/key/outfile_smk_demo.txt"
 remote_file_s3 = "bucket/key/news_archimedes_el.png"
 
+
 rule all:
     input:
         file="outfile_local.txt"
@@ -34,6 +35,7 @@ rule processing:
         openssl dgst -sha224 {input.file} > sha224.txt
         cat md5.txt sha1.txt sha224.txt > {output.file}
         """
+
 
 rule download:
     input:
